@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C702EB922E696F200DA5C89 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C702EB822E696F200DA5C89 /* WebKit.framework */; };
 		4CD48E1022E6936B00AA52EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD48E0F22E6936B00AA52EE /* AppDelegate.swift */; };
 		4CD48E1222E6936B00AA52EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD48E1122E6936B00AA52EE /* SceneDelegate.swift */; };
 		4CD48E1422E6936B00AA52EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD48E1322E6936B00AA52EE /* ViewController.swift */; };
 		4CD48E1722E6936B00AA52EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD48E1522E6936B00AA52EE /* Main.storyboard */; };
 		4CD48E1922E6936C00AA52EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD48E1822E6936C00AA52EE /* Assets.xcassets */; };
 		4CD48E1C22E6936C00AA52EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD48E1A22E6936C00AA52EE /* LaunchScreen.storyboard */; };
+		4CD48E2422E6938F00AA52EE /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD48E2322E6938F00AA52EE /* InformationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C702EB822E696F200DA5C89 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		4C702EBA22E6972C00DA5C89 /* WebkitView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WebkitView.entitlements; sourceTree = "<group>"; };
 		4CD48E0C22E6936B00AA52EE /* WebkitView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebkitView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD48E0F22E6936B00AA52EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CD48E1122E6936B00AA52EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,7 @@
 		4CD48E1822E6936C00AA52EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CD48E1B22E6936C00AA52EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CD48E1D22E6936C00AA52EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CD48E2322E6938F00AA52EE /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +36,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C702EB922E696F200DA5C89 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C702EB722E696F200DA5C89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C702EB822E696F200DA5C89 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4CD48E0322E6936B00AA52EE = {
 			isa = PBXGroup;
 			children = (
 				4CD48E0E22E6936B00AA52EE /* WebkitView */,
 				4CD48E0D22E6936B00AA52EE /* Products */,
+				4C702EB722E696F200DA5C89 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +71,8 @@
 		4CD48E0E22E6936B00AA52EE /* WebkitView */ = {
 			isa = PBXGroup;
 			children = (
+				4C702EBA22E6972C00DA5C89 /* WebkitView.entitlements */,
+				4CD48E2322E6938F00AA52EE /* InformationViewController.swift */,
 				4CD48E0F22E6936B00AA52EE /* AppDelegate.swift */,
 				4CD48E1122E6936B00AA52EE /* SceneDelegate.swift */,
 				4CD48E1322E6936B00AA52EE /* ViewController.swift */,
@@ -141,6 +158,7 @@
 				4CD48E1422E6936B00AA52EE /* ViewController.swift in Sources */,
 				4CD48E1022E6936B00AA52EE /* AppDelegate.swift in Sources */,
 				4CD48E1222E6936B00AA52EE /* SceneDelegate.swift in Sources */,
+				4CD48E2422E6938F00AA52EE /* InformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +302,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WebkitView/WebkitView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 6V82P5ET42;
 				INFOPLIST_FILE = WebkitView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -293,6 +313,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TransitionnTechnologyVentures.WebkitView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,7 +323,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WebkitView/WebkitView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 6V82P5ET42;
 				INFOPLIST_FILE = WebkitView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -311,6 +334,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TransitionnTechnologyVentures.WebkitView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
